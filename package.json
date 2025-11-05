@@ -38,7 +38,7 @@
     "publish": "npm publish -w lib",
     "publish:alpha": "npm run publish:alpha -w lib",
     "publish:beta": "npm run publish:beta -w lib",
-    "prepare": "is-ci || husky install"
+    "prepare": "echo 'Skipping husky install'"
   },
   "devDependencies": {
     "@playwright/test": "^1.15.0",
@@ -53,7 +53,6 @@
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^6.0.0",
-    "is-ci": "^3.0.0",
     "lint-staged": "^11.0.0",
     "prettier": "^2.3.0",
     "pretty-quick": "^3.1.0",

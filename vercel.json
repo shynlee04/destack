@@ -1,13 +1,4 @@
 {
-  "builds": [
-    {
-      "src": "dev/nextjs-project/package.json",
-      "use": "@vercel/next",
-      "config": {
-        "distDir": ".next"
-      }
-    }
-  ],
-  "installCommand": "cd dev/nextjs-project && npm install",
+  "installCommand": "cd dev/nextjs-project && npm ci --production=false",
   "buildCommand": "cd dev/nextjs-project && npm run build"
 }
