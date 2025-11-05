@@ -1,4 +1,22 @@
 {
-  "installCommand": "cd dev/nextjs-project && npm ci --production=false",
-  "buildCommand": "cd dev/nextjs-project && npm run build"
+  "installCommand": "npm ci --production=false",
+  "buildCommand": "npm run build:next",
+  "outputDirectory": "dev/nextjs-project/.next",
+  "framework": "nextjs",
+  "functions": {
+    "dev/nextjs-project/pages/api/**/*.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "s-maxage=300, stale-while-revalidate=86400"
+        }
+      ]
+    }
+  ]
 }
