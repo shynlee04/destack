@@ -1,6 +1,6 @@
 {
   "installCommand": "npm ci --production=false",
-  "buildCommand": "npm run build:next",
+  "buildCommand": "cp -r dev/nextjs-project/data . && npm run build:next",
   "outputDirectory": "dev/nextjs-project/.next",
   "framework": "nextjs",
   "headers": [
